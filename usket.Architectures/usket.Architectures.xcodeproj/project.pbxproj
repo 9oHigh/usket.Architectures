@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B38289947DA00E44172 /* AppDelegate.swift */; };
 		4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B3A289947DA00E44172 /* SceneDelegate.swift */; };
-		4C463B3D289947DA00E44172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B3C289947DA00E44172 /* ViewController.swift */; };
+		4C463B3D289947DA00E44172 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B3C289947DA00E44172 /* StartViewController.swift */; };
 		4C463B42289947DC00E44172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C463B41289947DC00E44172 /* Assets.xcassets */; };
 		4C463B50289947DD00E44172 /* usket_ArchitecturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B4F289947DD00E44172 /* usket_ArchitecturesTests.swift */; };
 		4C463B5A289947DD00E44172 /* usket_ArchitecturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B59289947DD00E44172 /* usket_ArchitecturesUITests.swift */; };
 		4C463B5C289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B5B289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift */; };
-		4C463B6A289948ED00E44172 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4C463B69289948ED00E44172 /* SnapKit */; };
+		4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B71289AA25100E44172 /* BaseViewController.swift */; };
+		4C463B8A289AA58900E44172 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B89289AA58900E44172 /* UIButton + Extension.swift */; };
+		4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986D289AA78A00B7B23F /* RxCocoa */; };
+		4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986F289AA78A00B7B23F /* RxRelay */; };
+		4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9871289AA78A00B7B23F /* RxSwift */; };
+		4CFC9875289AA79900B7B23F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9874289AA79900B7B23F /* SnapKit */; };
+		4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */; };
+		4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987A289AB46200B7B23F /* UserInfo.swift */; };
+		4CFC987D289AB4E200B7B23F /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */; };
+		4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +47,7 @@
 		4C463B35289947DA00E44172 /* usket.Architectures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usket.Architectures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C463B38289947DA00E44172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C463B3A289947DA00E44172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C463B3C289947DA00E44172 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C463B3C289947DA00E44172 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4C463B41289947DC00E44172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C463B46289947DC00E44172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C463B4B289947DD00E44172 /* usket.ArchitecturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usket.ArchitecturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +55,12 @@
 		4C463B55289947DD00E44172 /* usket.ArchitecturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usket.ArchitecturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C463B59289947DD00E44172 /* usket_ArchitecturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usket_ArchitecturesUITests.swift; sourceTree = "<group>"; };
 		4C463B5B289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usket_ArchitecturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C463B71289AA25100E44172 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4C463B89289AA58900E44172 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C463B6A289948ED00E44172 /* SnapKit in Frameworks */,
+				4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */,
+				4CFC9875289AA79900B7B23F /* SnapKit in Frameworks */,
+				4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */,
+				4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +115,14 @@
 		4C463B37289947DA00E44172 /* usket.Architectures */ = {
 			isa = PBXGroup;
 			children = (
-				4C463B38289947DA00E44172 /* AppDelegate.swift */,
-				4C463B3A289947DA00E44172 /* SceneDelegate.swift */,
-				4C463B3C289947DA00E44172 /* ViewController.swift */,
-				4C463B41289947DC00E44172 /* Assets.xcassets */,
 				4C463B46289947DC00E44172 /* Info.plist */,
+				4C463B41289947DC00E44172 /* Assets.xcassets */,
+				4C463B70289AA19400E44172 /* Common */,
+				4C463B6B289AA12500E44172 /* MVC */,
+				4C463B6C289AA12B00E44172 /* MVVM */,
+				4C463B6D289AA13700E44172 /* MVP */,
+				4C463B6E289AA13F00E44172 /* VIPER */,
+				4C463B6F289AA14700E44172 /* Ribs */,
 			);
 			path = usket.Architectures;
 			sourceTree = "<group>";
@@ -123,6 +144,65 @@
 			path = usket.ArchitecturesUITests;
 			sourceTree = "<group>";
 		};
+		4C463B6B289AA12500E44172 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */,
+				4CFC987A289AB46200B7B23F /* UserInfo.swift */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		4C463B6C289AA12B00E44172 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		4C463B6D289AA13700E44172 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		4C463B6E289AA13F00E44172 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		4C463B6F289AA14700E44172 /* Ribs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ribs;
+			sourceTree = "<group>";
+		};
+		4C463B70289AA19400E44172 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C463B38289947DA00E44172 /* AppDelegate.swift */,
+				4C463B3A289947DA00E44172 /* SceneDelegate.swift */,
+				4C463B71289AA25100E44172 /* BaseViewController.swift */,
+				4C463B3C289947DA00E44172 /* StartViewController.swift */,
+				4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */,
+				4C463B88289AA57100E44172 /* Extention */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4C463B88289AA57100E44172 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				4C463B89289AA58900E44172 /* UIButton + Extension.swift */,
+				4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,7 +220,10 @@
 			);
 			name = usket.Architectures;
 			packageProductDependencies = (
-				4C463B69289948ED00E44172 /* SnapKit */,
+				4CFC986D289AA78A00B7B23F /* RxCocoa */,
+				4CFC986F289AA78A00B7B23F /* RxRelay */,
+				4CFC9871289AA78A00B7B23F /* RxSwift */,
+				4CFC9874289AA79900B7B23F /* SnapKit */,
 			);
 			productName = usket.Architectures;
 			productReference = 4C463B35289947DA00E44172 /* usket.Architectures.app */;
@@ -215,7 +298,8 @@
 			);
 			mainGroup = 4C463B2C289947DA00E44172;
 			packageReferences = (
-				4C463B68289948ED00E44172 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4CFC986C289AA78A00B7B23F /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4CFC9873289AA79900B7B23F /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 4C463B36289947DA00E44172 /* Products */;
 			projectDirPath = "";
@@ -258,8 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C463B3D289947DA00E44172 /* ViewController.swift in Sources */,
+				4C463B8A289AA58900E44172 /* UIButton + Extension.swift in Sources */,
+				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
+				4C463B3D289947DA00E44172 /* StartViewController.swift in Sources */,
+				4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */,
 				4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */,
+				4CFC987D289AB4E200B7B23F /* ChooseViewController.swift in Sources */,
+				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
+				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,
 				4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +695,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C463B68289948ED00E44172 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		4CFC986C289AA78A00B7B23F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		4CFC9873289AA79900B7B23F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -616,9 +714,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C463B69289948ED00E44172 /* SnapKit */ = {
+		4CFC986D289AA78A00B7B23F /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C463B68289948ED00E44172 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 4CFC986C289AA78A00B7B23F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4CFC986F289AA78A00B7B23F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CFC986C289AA78A00B7B23F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		4CFC9871289AA78A00B7B23F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CFC986C289AA78A00B7B23F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4CFC9874289AA79900B7B23F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CFC9873289AA79900B7B23F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
