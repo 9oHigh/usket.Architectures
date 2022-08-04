@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let StartViewController = StartViewController()
+        StartViewController.title = "Architecture"
         window = UIWindow(windowScene: windowScene)
         
         window?.windowScene = windowScene

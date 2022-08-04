@@ -15,10 +15,11 @@ extension UIViewController {
         navigationController.pushViewController(viewController, animated: animated)
     }
     
-    func setNavigationBackButton(barTintColor: UIColor) {
-        
+    func setDefaultNavigationBar() {
         guard let navigationController = navigationController else { return }
+        
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        
         navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.topItem?.title = "뒤로"
     }
 }

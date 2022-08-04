@@ -11,13 +11,11 @@ final class UserInfoViewController: BaseViewController, BaseInitializing {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "안녕하시게~"
         setConfig()
     }
     
     func setConfig() {
-        setNavigationBackButton(barTintColor: .black)
-        
+        title = "MVC"
     }
     
     func setUI() {
