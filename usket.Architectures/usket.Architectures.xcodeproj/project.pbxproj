@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B38289947DA00E44172 /* AppDelegate.swift */; };
 		4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B3A289947DA00E44172 /* SceneDelegate.swift */; };
-		4C463B3D289947DA00E44172 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B3C289947DA00E44172 /* StartViewController.swift */; };
 		4C463B42289947DC00E44172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C463B41289947DC00E44172 /* Assets.xcassets */; };
 		4C463B50289947DD00E44172 /* usket_ArchitecturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B4F289947DD00E44172 /* usket_ArchitecturesTests.swift */; };
 		4C463B5A289947DD00E44172 /* usket_ArchitecturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B59289947DD00E44172 /* usket_ArchitecturesUITests.swift */; };
@@ -22,8 +21,9 @@
 		4CFC9875289AA79900B7B23F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9874289AA79900B7B23F /* SnapKit */; };
 		4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */; };
 		4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987A289AB46200B7B23F /* UserInfo.swift */; };
-		4CFC987D289AB4E200B7B23F /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */; };
+		4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987C289AB4E200B7B23F /* StartViewController.swift */; };
 		4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */; };
+		4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 		4C463B35289947DA00E44172 /* usket.Architectures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usket.Architectures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C463B38289947DA00E44172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C463B3A289947DA00E44172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C463B3C289947DA00E44172 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4C463B41289947DC00E44172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C463B46289947DC00E44172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C463B4B289947DD00E44172 /* usket.ArchitecturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usket.ArchitecturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +58,9 @@
 		4C463B89289AA58900E44172 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		4CFC987C289AB4E200B7B23F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +187,7 @@
 				4C463B38289947DA00E44172 /* AppDelegate.swift */,
 				4C463B3A289947DA00E44172 /* SceneDelegate.swift */,
 				4C463B71289AA25100E44172 /* BaseViewController.swift */,
-				4C463B3C289947DA00E44172 /* StartViewController.swift */,
-				4CFC987C289AB4E200B7B23F /* ChooseViewController.swift */,
+				4CFC987C289AB4E200B7B23F /* StartViewController.swift */,
 				4C463B88289AA57100E44172 /* Extention */,
 			);
 			path = Common;
@@ -199,6 +198,7 @@
 			children = (
 				4C463B89289AA58900E44172 /* UIButton + Extension.swift */,
 				4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */,
+				4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -343,11 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C463B8A289AA58900E44172 /* UIButton + Extension.swift in Sources */,
+				4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */,
 				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
-				4C463B3D289947DA00E44172 /* StartViewController.swift in Sources */,
 				4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */,
 				4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */,
-				4CFC987D289AB4E200B7B23F /* ChooseViewController.swift in Sources */,
+				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
 				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,
 				4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */,

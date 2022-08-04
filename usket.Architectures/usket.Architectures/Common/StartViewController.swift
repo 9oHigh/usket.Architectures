@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  ChooseViewController.swift
 //  usket.Architectures
 //
-//  Created by 이경후 on 2022/08/02.
+//  Created by 이경후 on 2022/08/03.
 //
 
 import UIKit
@@ -10,9 +10,14 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class StartViewController: BaseViewController, BaseInitializing {
+final class StartViewController: BaseViewController, BaseInitializing {
     
-    private let startButton = UIButton()
+    private let architectureStackView = UIStackView()
+    private let mvcButton = UIButton()
+    private let mvvmButton = UIButton()
+    private let mvpButton = UIButton()
+    private let viperButton = UIButton()
+    private let ribsButton = UIButton()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -24,29 +29,57 @@ class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setConfig() {
-        startButton.setStartButton()
+        architectureStackView.setArchitectureStackView()
+        mvcButton.setArchitectureButton(title: "MVC")
+        mvvmButton.setArchitectureButton(title: "MVVM")
+        mvpButton.setArchitectureButton(title: "MVP")
+        viperButton.setArchitectureButton(title: "VIPER")
+        ribsButton.setArchitectureButton(title: "RIBs")
     }
     
     func setUI() {
-        view.addSubview(startButton)
+        view.addSubview(architectureStackView)
+        architectureStackView.addArrangedSubview(mvcButton)
+        architectureStackView.addArrangedSubview(mvvmButton)
+        architectureStackView.addArrangedSubview(mvpButton)
+        architectureStackView.addArrangedSubview(viperButton)
+        architectureStackView.addArrangedSubview(ribsButton)
     }
     
     func setConstraints() {
-        
-        startButton.snp.makeConstraints { make in
+
+        architectureStackView.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.7)
             make.width.equalToSuperview().multipliedBy(0.5)
-            make.height.equalToSuperview().multipliedBy(0.1)
         }
     }
     
     func setBinding() {
-        startButton.rx.tap
-            .bind{
-                let chooseViewController = ChooseViewController()
-                chooseViewController.modalPresentationStyle = .automatic
-                self.present(chooseViewController, animated: true)
-            }
-            .disposed(by: disposeBag)
+        mvcButton.rx.tap.bind {
+            let viewController = UserInfoViewController()
+            self.pushNextViewController(viewController, animated: true)
+        }
+        .disposed(by: disposeBag)
+        
+        mvvmButton.rx.tap.bind {
+            
+        }
+        .disposed(by: disposeBag)
+        
+        mvpButton.rx.tap.bind {
+            
+        }
+        .disposed(by: disposeBag)
+        
+        viperButton.rx.tap.bind {
+            
+        }
+        .disposed(by: disposeBag)
+        
+        ribsButton.rx.tap.bind {
+            
+        }
+        .disposed(by: disposeBag)
     }
 }
