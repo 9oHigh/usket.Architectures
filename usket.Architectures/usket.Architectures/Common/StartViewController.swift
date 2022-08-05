@@ -40,6 +40,34 @@ final class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setBinding() {
+        guard let architectureButtons = architectureStackView.arrangedSubviews as? [UIButton] else { return }
         
+        let taps = architectureButtons.enumerated().map { ($0.0, $0.1.rx.tap) }
+        let toInts = taps.map { index, obs in obs.map { index } }
+        let mergedTaps = Observable.merge(toInts)
+        
+        mergedTaps.subscribe(onNext: { tag in
+            switch tag {
+            case 0:
+                let viewController = UserInfoViewController()
+                self.pushToNextViewController(viewController)
+            case 1:
+                let viewController = UserInfoViewController()
+                self.pushToNextViewController(viewController)
+            case 2:
+                let viewController = UserInfoViewController()
+                self.pushToNextViewController(viewController)
+            case 3:
+                let viewController = UserInfoViewController()
+                self.pushToNextViewController(viewController)
+            case 4:
+                let viewController = UserInfoViewController()
+                self.pushToNextViewController(viewController)
+            default:
+                return
+            }
+        })
+        .disposed(by: disposeBag)
+
     }
 }

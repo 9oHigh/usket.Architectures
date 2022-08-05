@@ -24,4 +24,13 @@ extension UIStackView {
             addArrangedSubview(architectureButton)
         }
     }
+    
+    func returnButtonAtIndex(index: Int) -> UIButton? {
+        
+        guard let architectureButton = arrangedSubviews[index] as? UIButton else {
+            return nil
+        }
+
+        return architectureButton
+    }
 }

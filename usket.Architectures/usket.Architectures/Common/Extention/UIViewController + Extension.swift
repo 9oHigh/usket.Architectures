@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
 
-    func pushToNextViewController(_ viewController: UIViewController, animated: Bool) {
+    func pushToNextViewController(_ viewController: UIViewController, animated: Bool = true) {
         
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(viewController, animated: animated)
