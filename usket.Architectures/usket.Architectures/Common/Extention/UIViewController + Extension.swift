@@ -9,10 +9,14 @@ import UIKit
 
 extension UIViewController {
 
-    func pushNextViewController(_ viewController: UIViewController, animated: Bool) {
+    func pushToNextViewController(_ viewController: UIViewController, animated: Bool) {
         
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(viewController, animated: animated)
+    }
+    
+    func dismissToPrevViewController() {
+        dismiss(animated: true)
     }
     
     func setDefaultNavigationBar() {

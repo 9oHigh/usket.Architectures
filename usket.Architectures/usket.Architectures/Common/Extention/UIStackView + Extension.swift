@@ -9,13 +9,19 @@ import UIKit
 
 extension UIStackView {
     
-    func setArchitectureStackView() {
-        backgroundColor = .white
-        // 만약 버튼들의 너비를 일괄로 주고 싶다면
-        // alignment를 fill로 해주면 해결가능하다.
+    // 만약 버튼들의 너비를 일괄로 주고 싶다면
+    // alignment를 fill로 해주면 해결가능하다.
+    func setArchitectureStackView(names: [String], verticalSpacing: CGFloat) {
         alignment = .fill
+        backgroundColor = .white
         axis = .vertical
-        spacing = 20
+        spacing = verticalSpacing
         distribution = .fillEqually
+        
+        names.forEach { title in
+            let architectureButton = UIButton()
+            architectureButton.setArchitectureButton(title: title)
+            addArrangedSubview(architectureButton)
+        }
     }
 }

@@ -13,11 +13,6 @@ import RxCocoa
 final class StartViewController: BaseViewController, BaseInitializing {
     
     private let architectureStackView = UIStackView()
-    private let mvcButton = UIButton()
-    private let mvvmButton = UIButton()
-    private let mvpButton = UIButton()
-    private let viperButton = UIButton()
-    private let ribsButton = UIButton()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -29,25 +24,14 @@ final class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setConfig() {
-        architectureStackView.setArchitectureStackView()
-        mvcButton.setArchitectureButton(title: "MVC")
-        mvvmButton.setArchitectureButton(title: "MVVM")
-        mvpButton.setArchitectureButton(title: "MVP")
-        viperButton.setArchitectureButton(title: "VIPER")
-        ribsButton.setArchitectureButton(title: "RIBs")
+        architectureStackView.setArchitectureStackView(names: ["MVC", "MVVM", "MVP", "VIPER", "RIBs"], verticalSpacing: 20)
     }
     
     func setUI() {
         view.addSubview(architectureStackView)
-        architectureStackView.addArrangedSubview(mvcButton)
-        architectureStackView.addArrangedSubview(mvvmButton)
-        architectureStackView.addArrangedSubview(mvpButton)
-        architectureStackView.addArrangedSubview(viperButton)
-        architectureStackView.addArrangedSubview(ribsButton)
     }
     
     func setConstraints() {
-
         architectureStackView.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.7)
@@ -56,30 +40,6 @@ final class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setBinding() {
-        mvcButton.rx.tap.bind {
-            let viewController = UserInfoViewController()
-            self.pushNextViewController(viewController, animated: true)
-        }
-        .disposed(by: disposeBag)
         
-        mvvmButton.rx.tap.bind {
-            
-        }
-        .disposed(by: disposeBag)
-        
-        mvpButton.rx.tap.bind {
-            
-        }
-        .disposed(by: disposeBag)
-        
-        viperButton.rx.tap.bind {
-            
-        }
-        .disposed(by: disposeBag)
-        
-        ribsButton.rx.tap.bind {
-            
-        }
-        .disposed(by: disposeBag)
     }
 }
