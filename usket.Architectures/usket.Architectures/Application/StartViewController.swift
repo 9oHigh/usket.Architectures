@@ -68,6 +68,5 @@ final class StartViewController: BaseViewController, BaseInitializing {
             }
         })
         .disposed(by: disposeBag)
-
     }
 }

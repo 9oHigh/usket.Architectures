@@ -15,8 +15,8 @@ extension UIViewController {
         navigationController.pushViewController(viewController, animated: animated)
     }
     
-    func dismissToPrevViewController() {
-        dismiss(animated: true)
+    func dismissToPrevViewController(animated: Bool = true) {
+        dismiss(animated: animated)
     }
     
     func setDefaultNavigationBar() {
