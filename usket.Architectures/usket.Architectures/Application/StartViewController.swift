@@ -24,7 +24,7 @@ final class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setConfig() {
-        architectureStackView.setArchitectureStackView(names: ["MVC", "MVVM", "MVP", "VIPER", "RIBs"], verticalSpacing: 20)
+        architectureStackView.setArchitectureStackView(names: ["MVC", "MVVM", "MVP", "VIPER", "RIBS"], nextPages: NextPage.allCases, verticalSpacing: 20)
     }
     
     func setUI() {
@@ -40,30 +40,35 @@ final class StartViewController: BaseViewController, BaseInitializing {
     }
     
     func setBinding() {
-        guard let architectureButtons = architectureStackView.arrangedSubviews as? [UIButton] else { return }
+        guard let architectureButtons = architectureStackView.arrangedSubviews as? [ArchitectureButton] else { return }
         
-        let taps = architectureButtons.enumerated().map { ($0.0, $0.1.rx.tap) }
-        let toInts = taps.map { index, obs in obs.map { index } }
-        let mergedTaps = Observable.merge(toInts)
+        let taps = architectureButtons.enumerated().map { ($0.element.nextPage, $0.1.rx.tap) }
+        let toNextPage = taps.map { nextPage, obs in obs.map { nextPage } }
+        let mergedTaps = Observable.merge(toNextPage)
         
-        mergedTaps.subscribe(onNext: { tag in
-            switch tag {
-            case 0:
+        mergedTaps.subscribe(onNext: { nextPage in
+            switch nextPage {
+            case .mvc:
                 let viewController = UserInfoViewController()
-                self.pushToNextViewController(viewController)
-            case 1:
+                let title = nextPage?.rawValue.uppercased()
+                self.pushToNextViewController(title: title,viewController)
+            case .mvvm:
                 let viewController = UserInfoViewController()
-                self.pushToNextViewController(viewController)
-            case 2:
+                let title = nextPage?.rawValue.uppercased()
+                self.pushToNextViewController(title: title,viewController)
+            case .mvp:
                 let viewController = UserInfoViewController()
-                self.pushToNextViewController(viewController)
-            case 3:
+                let title = nextPage?.rawValue.uppercased()
+                self.pushToNextViewController(title: title,viewController)
+            case .viper:
                 let viewController = UserInfoViewController()
-                self.pushToNextViewController(viewController)
-            case 4:
+                let title = nextPage?.rawValue.uppercased()
+                self.pushToNextViewController(title: title,viewController)
+            case .ribs:
                 let viewController = UserInfoViewController()
-                self.pushToNextViewController(viewController)
-            default:
+                let title = nextPage?.rawValue.uppercased()
+                self.pushToNextViewController(title: title,viewController)
+            case .none:
                 return
             }
         })

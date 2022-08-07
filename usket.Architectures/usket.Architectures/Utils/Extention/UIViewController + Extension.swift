@@ -9,9 +9,10 @@ import UIKit
 
 extension UIViewController {
 
-    func pushToNextViewController(_ viewController: UIViewController, animated: Bool = true) {
+    func pushToNextViewController(title: String?, _ viewController: UIViewController, animated: Bool = true) {
         
         guard let navigationController = navigationController else { return }
+        viewController.title = title
         navigationController.pushViewController(viewController, animated: animated)
     }
     

@@ -11,11 +11,11 @@ final class UserInfoViewController: BaseViewController, BaseInitializing {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setConfig()
+        
     }
     
     func setConfig() {
-        title = "MVC"
+        
     }
     
     func setUI() {
