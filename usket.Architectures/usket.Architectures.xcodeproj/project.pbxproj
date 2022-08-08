@@ -25,6 +25,10 @@
 		4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */; };
 		4CFC9887289DFC8500B7B23F /* ArchitectureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9886289DFC8500B7B23F /* ArchitectureButton.swift */; };
 		4CFC988A289DFDFD00B7B23F /* NextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC9889289DFDFD00B7B23F /* NextPage.swift */; };
+		4CFC988D28A1375900B7B23F /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC988C28A1375900B7B23F /* UITextField + Extension.swift */; };
+		4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC988E28A137F400B7B23F /* UILabel + Extension.swift */; };
+		4CFC989228A13EAF00B7B23F /* UserInfoInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC989128A13EAF00B7B23F /* UserInfoInputView.swift */; };
+		4CFC989428A1478900B7B23F /* ToastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC989328A1478900B7B23F /* ToastLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		4CFC9886289DFC8500B7B23F /* ArchitectureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureButton.swift; sourceTree = "<group>"; };
 		4CFC9889289DFDFD00B7B23F /* NextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPage.swift; sourceTree = "<group>"; };
+		4CFC988C28A1375900B7B23F /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
+		4CFC988E28A137F400B7B23F /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		4CFC989128A13EAF00B7B23F /* UserInfoInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInputView.swift; sourceTree = "<group>"; };
+		4CFC989328A1478900B7B23F /* ToastLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +128,6 @@
 				4C463B46289947DC00E44172 /* Info.plist */,
 				4C463B41289947DC00E44172 /* Assets.xcassets */,
 				4C463B70289AA19400E44172 /* Application */,
-				4CFC9885289DFC6000B7B23F /* CustomView */,
 				4C463B6B289AA12500E44172 /* MVC */,
 				4C463B6C289AA12B00E44172 /* MVVM */,
 				4C463B6D289AA13700E44172 /* MVP */,
@@ -201,6 +208,8 @@
 			children = (
 				4CFC987E289AB5BA00B7B23F /* UIStackView + Extension.swift */,
 				4CFC9880289BF8C300B7B23F /* UIViewController + Extension.swift */,
+				4CFC988C28A1375900B7B23F /* UITextField + Extension.swift */,
+				4CFC988E28A137F400B7B23F /* UILabel + Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFC9888289DFDF400B7B23F /* Enum */,
+				4CFC9885289DFC6000B7B23F /* CustomView */,
 				4C463B88289AA57100E44172 /* Extention */,
 			);
 			path = Utils;
@@ -217,7 +227,9 @@
 		4CFC9885289DFC6000B7B23F /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				4CFC9886289DFC8500B7B23F /* ArchitectureButton.swift */,
+				4CFC989528A1479300B7B23F /* Global */,
+				4CFC989028A13D3600B7B23F /* UserInfoInputView */,
+				4CFC988B28A1363D00B7B23F /* Button */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -228,6 +240,30 @@
 				4CFC9889289DFDFD00B7B23F /* NextPage.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		4CFC988B28A1363D00B7B23F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC9886289DFC8500B7B23F /* ArchitectureButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		4CFC989028A13D3600B7B23F /* UserInfoInputView */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC989128A13EAF00B7B23F /* UserInfoInputView.swift */,
+			);
+			path = UserInfoInputView;
+			sourceTree = "<group>";
+		};
+		4CFC989528A1479300B7B23F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC989328A1478900B7B23F /* ToastLabel.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,14 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFC989428A1478900B7B23F /* ToastLabel.swift in Sources */,
 				4CFC988A289DFDFD00B7B23F /* NextPage.swift in Sources */,
 				4CFC9887289DFC8500B7B23F /* ArchitectureButton.swift in Sources */,
 				4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */,
 				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
 				4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */,
 				4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */,
+				4CFC988D28A1375900B7B23F /* UITextField + Extension.swift in Sources */,
 				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
+				4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
+				4CFC989228A13EAF00B7B23F /* UserInfoInputView.swift in Sources */,
 				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,
 				4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */,
 			);

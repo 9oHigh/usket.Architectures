@@ -11,7 +11,6 @@ protocol BaseInitializing {
     func setConfig()
     func setUI()
     func setConstraints()
-    func setBinding()
 }
 
 class BaseViewController: UIViewController {

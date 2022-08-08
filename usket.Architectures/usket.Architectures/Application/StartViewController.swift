@@ -39,7 +39,7 @@ final class StartViewController: BaseViewController, BaseInitializing {
         }
     }
     
-    func setBinding() {
+    private func setBinding() {
         guard let architectureButtons = architectureStackView.arrangedSubviews as? [ArchitectureButton] else { return }
         
         let taps = architectureButtons.enumerated().map { ($0.element.nextPage, $0.1.rx.tap) }

@@ -20,13 +20,12 @@ class ArchitectureButton: UIButton {
     }
     
     func initializeNextPage(title: String, nextPage: NextPage) {
+        self.nextPage = nextPage
         backgroundColor = .black
         layer.cornerRadius = 10
         
         titleLabel?.textColor = .white
         titleLabel?.font = .boldSystemFont(ofSize: 18)
         setTitle(title, for: .normal)
-        
-        self.nextPage = nextPage
     }
 }
