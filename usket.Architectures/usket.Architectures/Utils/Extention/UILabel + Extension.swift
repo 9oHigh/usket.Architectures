@@ -14,6 +14,7 @@ extension UILabel {
     func setUserInfoLabel() {
         textColor = .black
         textAlignment = .left
+        numberOfLines = 0
         font = .boldSystemFont(ofSize: 18)
     }
     
@@ -24,11 +25,16 @@ extension UILabel {
         font = .boldSystemFont(ofSize: 25)
     }
     
+    func setCheckUserInformation(userInfo: UserInfo) {
+        let checkMessage = "Check your information.\n\n"
+        text = checkMessage + "Name: " + userInfo.name + "\n\n" + "Age: " + userInfo.age
+    }
+    
     // MARK: - UserInfoInputView
     
     func setUserInfoInputLabel() {
         textColor = .black
-        textAlignment = .center
+        textAlignment = .left
         font = .boldSystemFont(ofSize: 18)
     }
 }

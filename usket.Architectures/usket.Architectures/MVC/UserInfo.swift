@@ -10,9 +10,9 @@ import Foundation
 struct UserInfo {
     
     let name: String
-    let age: Int
+    let age: String
     
-    init(name: String, age: Int) {
+    init(name: String, age: String) {
         self.name = name
         self.age = age
     }

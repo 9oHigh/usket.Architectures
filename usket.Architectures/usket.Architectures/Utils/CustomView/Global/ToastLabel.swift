@@ -9,7 +9,7 @@ import UIKit
 
 final class ToastLabel: UILabel {
     
-    private var padding = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
+    private var padding = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
     
     override var intrinsicContentSize: CGSize {
         var contentSize = super.intrinsicContentSize

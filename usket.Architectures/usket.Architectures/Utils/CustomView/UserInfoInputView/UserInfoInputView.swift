@@ -52,4 +52,8 @@ final class UserInfoInputView: UIView, BaseInitializing {
             make.height.equalToSuperview()
         }
     }
+    
+    func getUserInfo() -> String? {
+        return contentTextField.text
+    }
 }

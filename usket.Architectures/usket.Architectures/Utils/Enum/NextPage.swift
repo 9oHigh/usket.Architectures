@@ -12,4 +12,3 @@ enum NextPage: String, CaseIterable {
     case viper
     case ribs
 }
-
