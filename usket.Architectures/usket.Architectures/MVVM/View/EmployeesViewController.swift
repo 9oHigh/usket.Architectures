@@ -9,6 +9,9 @@ import UIKit
 
 final class EmployeesViewController: BaseViewController, BaseInitializing {
     
+    private let employeesTableView = UITableView()
+    private let employeesFetchButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setConfig()
