@@ -13,13 +13,8 @@ final class APIService {
     private let sourcesURL = URL(string: "http://dummy.restapiexample.com/api/v1/employees")!
     
     
-    func requestEmployees() -> [Datum] {
+    func requestEmployees() -> Source? {
         
-        URLSession.shared.dataTask(with: sourcesURL) {
-            data, response, error in
-
-           
-        }.resume()
-        return [Datum(id: 0, employeeName: "", employeeSalary: 0, employeeAge: 0, profileImage: "")]
+            
     }
 }
