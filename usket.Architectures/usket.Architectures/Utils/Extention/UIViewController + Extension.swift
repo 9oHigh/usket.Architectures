@@ -26,7 +26,6 @@ extension UIViewController {
         guard let navigationController = navigationController else { return }
         
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        
         navigationController.navigationBar.tintColor = .black
     }
     

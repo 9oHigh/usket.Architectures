@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 protocol ViewModelType {
     associatedtype Input
@@ -23,7 +24,7 @@ final class EmployeesViewModel: ViewModelType {
     }
     
     struct Output {
-        let employeesList = BehaviorSubject<[Datum]>(value: [])
+        let employeesList = BehaviorRelay<[Datum]>(value: [])
     }
     
     var input: Input
@@ -31,7 +32,7 @@ final class EmployeesViewModel: ViewModelType {
     
     private let apiService: APIService
     private let disposeBag = DisposeBag()
-   
+    
     init(input: Input = Input(), output: Output = Output(), apiService: APIService = APIService()) {
         self.input = input
         self.output = output
@@ -39,6 +40,12 @@ final class EmployeesViewModel: ViewModelType {
     }
     
     func fetchEmployees() {
+        apiService.requestEmployees { [weak self] source in
+            self?.output.employeesList.accept(source.data)
+        }
+    }
+    
+    func setLoadTrigger() {
         
     }
 }
