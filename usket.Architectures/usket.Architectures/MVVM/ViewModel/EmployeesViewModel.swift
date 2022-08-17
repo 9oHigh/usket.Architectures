@@ -46,6 +46,6 @@ final class EmployeesViewModel: ViewModelType {
     }
     
     func setLoadTrigger() {
-        
+
     }
 }

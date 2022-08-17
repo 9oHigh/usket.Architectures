@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class EmployeesViewController: BaseViewController, BaseInitializing {
     
@@ -18,6 +20,7 @@ final class EmployeesViewController: BaseViewController, BaseInitializing {
         setConfig()
         setUI()
         setConstraints()
+        bind()
         viewModel.fetchEmployees()
     }
     
@@ -45,5 +48,9 @@ final class EmployeesViewController: BaseViewController, BaseInitializing {
             make.trailing.equalTo(-16)
             make.bottom.equalToSuperview()
         }
+    }
+    
+    func bind() {
+       
     }
 }

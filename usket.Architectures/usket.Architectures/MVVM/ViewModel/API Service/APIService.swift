@@ -18,9 +18,7 @@ final class APIService {
             data, response, error in
             
             guard let data = data else { return }
-            guard let datum = try? JSONDecoder().decode(Source.self, from: data) else {
-                return
-            }
+            guard let datum = try? JSONDecoder().decode(Source.self, from: data) else { return }
             onCompletion(datum)
         }.resume()
     }

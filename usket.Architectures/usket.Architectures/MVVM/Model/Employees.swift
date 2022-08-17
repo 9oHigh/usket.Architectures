@@ -5,7 +5,7 @@
 //  Created by 이경후 on 2022/08/13.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Source
 struct Source: Codable {
