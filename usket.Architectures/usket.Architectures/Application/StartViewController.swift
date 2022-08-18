@@ -53,7 +53,7 @@ final class StartViewController: BaseViewController, BaseInitializing {
                 let title = nextPage?.rawValue.uppercased()
                 self.pushToNextViewController(title: title,viewController)
             case .mvvm:
-                let viewController = UserInfoViewController()
+                let viewController = EmployeesViewController()
                 let title = nextPage?.rawValue.uppercased()
                 self.pushToNextViewController(title: title,viewController)
             case .mvp:

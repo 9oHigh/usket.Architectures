@@ -16,8 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let StartViewController = StartViewController()
         StartViewController.title = "Architecture"
-        window = UIWindow(windowScene: windowScene)
         
+        window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         window?.rootViewController = UINavigationController(rootViewController:  StartViewController)
         window?.makeKeyAndVisible()

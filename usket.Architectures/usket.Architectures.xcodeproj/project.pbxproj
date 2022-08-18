@@ -14,6 +14,14 @@
 		4C463B5A289947DD00E44172 /* usket_ArchitecturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B59289947DD00E44172 /* usket_ArchitecturesUITests.swift */; };
 		4C463B5C289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B5B289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift */; };
 		4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C463B71289AA25100E44172 /* BaseViewController.swift */; };
+		4C73EEF628A54ACF00C96D3D /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EEF528A54ACF00C96D3D /* EmployeesViewController.swift */; };
+		4C73EEFD28A7BF8900C96D3D /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EEFC28A7BF8900C96D3D /* Employees.swift */; };
+		4C73EEFF28A7C00B00C96D3D /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EEFE28A7C00B00C96D3D /* EmployeesViewModel.swift */; };
+		4C73EF0228A7C03D00C96D3D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0128A7C03D00C96D3D /* APIService.swift */; };
+		4C73EF0428ABB38400C96D3D /* EmployeesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0328ABB38400C96D3D /* EmployeesButton.swift */; };
+		4C73EF0628AD29F500C96D3D /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */; };
+		4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0828AE786500C96D3D /* EmployInfoView.swift */; };
+		4C73EF0B28AE81E800C96D3D /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */; };
 		4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986D289AA78A00B7B23F /* RxCocoa */; };
 		4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986F289AA78A00B7B23F /* RxRelay */; };
 		4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9871289AA78A00B7B23F /* RxSwift */; };
@@ -62,6 +70,14 @@
 		4C463B59289947DD00E44172 /* usket_ArchitecturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usket_ArchitecturesUITests.swift; sourceTree = "<group>"; };
 		4C463B5B289947DD00E44172 /* usket_ArchitecturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usket_ArchitecturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C463B71289AA25100E44172 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4C73EEF528A54ACF00C96D3D /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		4C73EEFC28A7BF8900C96D3D /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
+		4C73EEFE28A7C00B00C96D3D /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		4C73EF0128A7C03D00C96D3D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4C73EF0328ABB38400C96D3D /* EmployeesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesButton.swift; sourceTree = "<group>"; };
+		4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
+		4C73EF0828AE786500C96D3D /* EmployInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployInfoView.swift; sourceTree = "<group>"; };
+		4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
 		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		4CFC987C289AB4E200B7B23F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -162,8 +178,8 @@
 		4C463B6B289AA12500E44172 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				4CFC987A289AB46200B7B23F /* UserInfo.swift */,
-				4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */,
+				4C73EEF728A54B0E00C96D3D /* Model */,
+				4C73EEF828A54B1A00C96D3D /* ViewController */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -171,6 +187,9 @@
 		4C463B6C289AA12B00E44172 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4C73EEFB28A54B3F00C96D3D /* Model */,
+				4C73EEFA28A54B3400C96D3D /* View */,
+				4C73EEF928A54B2C00C96D3D /* ViewModel */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -215,8 +234,67 @@
 				4CFC988C28A1375900B7B23F /* UITextField + Extension.swift */,
 				4CFC988E28A137F400B7B23F /* UILabel + Extension.swift */,
 				4CFC989628A2759C00B7B23F /* UIButton + Extension.swift */,
+				4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		4C73EEF728A54B0E00C96D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC987A289AB46200B7B23F /* UserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C73EEF828A54B1A00C96D3D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4C73EEF928A54B2C00C96D3D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EEFE28A7C00B00C96D3D /* EmployeesViewModel.swift */,
+				4C73EF0028A7C01000C96D3D /* API Service */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4C73EEFA28A54B3400C96D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EEF528A54ACF00C96D3D /* EmployeesViewController.swift */,
+				4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C73EEFB28A54B3F00C96D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EEFC28A7BF8900C96D3D /* Employees.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C73EF0028A7C01000C96D3D /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF0128A7C03D00C96D3D /* APIService.swift */,
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		4C73EF0728AE784400C96D3D /* EmployeeInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF0828AE786500C96D3D /* EmployInfoView.swift */,
+			);
+			path = EmployeeInfoView;
 			sourceTree = "<group>";
 		};
 		4CFC9884289D59C900B7B23F /* Utils */ = {
@@ -232,9 +310,10 @@
 		4CFC9885289DFC6000B7B23F /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				4CFC989528A1479300B7B23F /* Global */,
-				4CFC989028A13D3600B7B23F /* UserInfoInputView */,
+				4CFC989528A1479300B7B23F /* Toast */,
 				4CFC988B28A1363D00B7B23F /* Button */,
+				4CFC989028A13D3600B7B23F /* UserInfoInputView */,
+				4C73EF0728AE784400C96D3D /* EmployeeInfoView */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -252,6 +331,7 @@
 			children = (
 				4CFC9886289DFC8500B7B23F /* ArchitectureButton.swift */,
 				4CFC989828A277A500B7B23F /* CheckButton.swift */,
+				4C73EF0328ABB38400C96D3D /* EmployeesButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -264,12 +344,12 @@
 			path = UserInfoInputView;
 			sourceTree = "<group>";
 		};
-		4CFC989528A1479300B7B23F /* Global */ = {
+		4CFC989528A1479300B7B23F /* Toast */ = {
 			isa = PBXGroup;
 			children = (
 				4CFC989328A1478900B7B23F /* ToastLabel.swift */,
 			);
-			path = Global;
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,16 +494,24 @@
 				4CFC989428A1478900B7B23F /* ToastLabel.swift in Sources */,
 				4CFC988A289DFDFD00B7B23F /* NextPage.swift in Sources */,
 				4CFC9887289DFC8500B7B23F /* ArchitectureButton.swift in Sources */,
+				4C73EF0428ABB38400C96D3D /* EmployeesButton.swift in Sources */,
 				4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */,
+				4C73EEFF28A7C00B00C96D3D /* EmployeesViewModel.swift in Sources */,
 				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
+				4C73EF0628AD29F500C96D3D /* EmployeesTableViewCell.swift in Sources */,
+				4C73EF0228A7C03D00C96D3D /* APIService.swift in Sources */,
 				4CFC989728A2759C00B7B23F /* UIButton + Extension.swift in Sources */,
 				4CFC989928A277A500B7B23F /* CheckButton.swift in Sources */,
 				4C463B72289AA25100E44172 /* BaseViewController.swift in Sources */,
 				4C463B39289947DA00E44172 /* AppDelegate.swift in Sources */,
+				4C73EEFD28A7BF8900C96D3D /* Employees.swift in Sources */,
 				4CFC988D28A1375900B7B23F /* UITextField + Extension.swift in Sources */,
 				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
+				4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */,
 				4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
+				4C73EF0B28AE81E800C96D3D /* Int + Extension.swift in Sources */,
+				4C73EEF628A54ACF00C96D3D /* EmployeesViewController.swift in Sources */,
 				4CFC989228A13EAF00B7B23F /* UserInfoInputView.swift in Sources */,
 				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,
 				4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */,
