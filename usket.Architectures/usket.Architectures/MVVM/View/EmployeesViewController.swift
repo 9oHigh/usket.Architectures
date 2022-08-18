@@ -13,6 +13,7 @@ final class EmployeesViewController: BaseViewController, BaseInitializing {
     
     private let employeesTableView: UITableView = UITableView()
     private let employeesFetchButton = EmployeesButton()
+    
     private let viewModel = EmployeesViewModel()
     private let disposeBag = DisposeBag()
     

@@ -37,11 +37,8 @@ final class EmployeesViewModel: ViewModelType {
         self.input = input
         self.output = output
         self.apiService = apiService
-        self.fetchEmployees()
-    }
-    
-    func fetchEmployees() {
-        input.loadTrigger
+        
+        self.input.loadTrigger
             .bind { [weak self] _ in
                 self?.apiService.requestEmployees { [weak self] source in
                     self?.output.employeesList.onNext(source.data)
