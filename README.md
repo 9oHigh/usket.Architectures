@@ -116,4 +116,144 @@
                 
 </div>
 </details>
-                    
+          
+### 2. MVVM
+
+<details>
+<summary>정리</summary>
+<div markdown="2"> 
+
+![Untitled](https://user-images.githubusercontent.com/53691249/185435480-bfe4a54d-5782-4ace-83dc-0fdaee05bd93.png)
+
+- M ( Model )
+    - UI와 독립되어 있습니다.
+    - App이 하는 일에 대한 데이터와 로직을 캡슐화
+    - Model이 변경되었을 때, ViewModel에게 이를 알린다.
+
+- V ( View )
+    - MVC 아키텍처와는 다르게 ViewController 자체를 View로 취급한다.
+    - UI와 관련된 모든 로직은 ViewModel에 있으므로 View / ViewController가 비대해 지는 것을 방지 할 수 있다. 다만, 모든 로직이 ViewModel에 있는 만큼 ViewModel이 비대해 질 수 있다.
+    - View는 ViewModel을 참조한다.
+    - View는 Model을 참조하지 않는다.
+    - **View는 발행(Publication)을 구독(Subscribe)하고, 관찰(Observe)한다.**
+
+- VM ( ViewModel )
+    - ViewModel을 통해 UI로직과 비즈니스 로직을 분리
+    - ViewModel은 Model을 참조한다.
+    - **View 없이도 테스트가 가능하다. ( 좋은 아키텍처의 조건 중 하나 - 테스트 가능 여부 )**
+    - ViewModel은 View의 Input으로부터 Model을 업데이트
+    - ViewModel은 Model이 변경되면 View에 반영한다. 즉, Model의 Output으로부터 View를 업데이트
+    - ViewModel은 View에 직접적으로 이야기하지 않는다. 무언가 바뀌었다고 발표(Publish)한다.
+    - 모든 UI 컨트롤의 상태를 알려주는 프로퍼티를 포함한다.
+
+- MVVM Architecture의 개념과 장단점
+    - UI 로직과 비즈니스 로직을 분리하고, 리액티브한 UI 컨셉과 함께 협력하여 작동하는 아키텍처
+    - 장점
+        - View와 Model이 서로 전혀 알지 못하기 때문에 독립성을 유지할 수 있다. 때문에 Unit Test(하나의 메서드의 특정 루틴을 테스트하는 행위)가 가능하다.
+        - View와 ViewModel의 관계는 N:1이기 때문에 하나의 ViewModel을 이용해 여러 View를 사용할 수 있다.
+    - 단점
+        - 간단한 UI에서는 오히려 ViewModel을 설계하는데 어려움이 있을 수 있다.
+        - 데이터 바인딩은 필수적이다.
+        - 복잡해질 수록 MVC의 ViewController가 비대해지듯이 ViewModel 또한 비대해 질 수 있다.
+
+- 결론 :  유지보수, 테스팅 등 지속가능성이 MVC 보다 월등히 높기 때문에 많은 앱들이 MVVM Architecture 혹은 MVVM CleanArchitecture를 사용하고 있다.
+
+- 간단한 구현
+    - [공개적으로 사용 가능한 더미 웹서비스를 활용](http://dummy.restapiexample.com/api/v1/employees)
+    - 해당 데이터(Employees)를 받아와 TableView에 표시하는 예시
+        - M ( Model ) - [QuickType을 활용한 Model 생성](https://app.quicktype.io/)
+
+            ```swift
+            // MARK: - Source
+            struct Source: Codable {
+                let status: String
+                let data: [Datum]
+                let message: String
+            }
+
+            // MARK: - Datum
+            struct Datum: Codable {
+                let id: Int
+                let employeeName: String
+                let employeeSalary, employeeAge: Int
+                let profileImage: String
+
+                enum CodingKeys: String, CodingKey {
+                    case id
+                    case employeeName = "employee_name"
+                    case employeeSalary = "employee_salary"
+                    case employeeAge = "employee_age"
+                    case profileImage = "profile_image"
+                }
+            }
+            ```
+
+        - 참고
+
+            ```swift
+            {"status":"success","data":[{"id":1,"employee_name":"Tiger Nixon","employee_salary":320800,"employee_age":61,"profile_image":""},{"id":2,"employee_name":"Garrett Winters","employee_salary":170750,"employee_age":63,"profile_image":""},{"id":3,"employee_name":"Ashton Cox","employee_salary":86000,"employee_age":66,"profile_image":""},{"id":4,"employee_name":"Cedric Kelly","employee_salary":433060,"employee_age":22,"profile_image":""},{"id":5,"employee_name":"Airi Satou","employee_salary":162700,"employee_age":33,"profile_image":""},{"id":6,"employee_name":"Brielle Williamson","employee_salary":372000,"employee_age":61,"profile_image":""},{"id":7,"employee_name":"Herrod Chandler","employee_salary":137500,"employee_age":59,"profile_image":""},{"id":8,"employee_name":"Rhona Davidson","employee_salary":327900,"employee_age":55,"profile_image":""},{"id":9,"employee_name":"Colleen Hurst","employee_salary":205500,"employee_age":39,"profile_image":""},{"id":10,"employee_name":"Sonya Frost","employee_salary":103600,"employee_age":23,"profile_image":""},{"id":11,"employee_name":"Jena Gaines","employee_salary":90560,"employee_age":30,"profile_image":""},{"id":12,"employee_name":"Quinn Flynn","employee_salary":342000,"employee_age":22,"profile_image":""},{"id":13,"employee_name":"Charde Marshall","employee_salary":470600,"employee_age":36,"profile_image":""},{"id":14,"employee_name":"Haley Kennedy","employee_salary":313500,"employee_age":43,"profile_image":""},{"id":15,"employee_name":"Tatyana Fitzpatrick","employee_salary":385750,"employee_age":19,"profile_image":""},{"id":16,"employee_name":"Michael Silva","employee_salary":198500,"employee_age":66,"profile_image":""},{"id":17,"employee_name":"Paul Byrd","employee_salary":725000,"employee_age":64,"profile_image":""},{"id":18,"employee_name":"Gloria Little","employee_salary":237500,"employee_age":59,"profile_image":""},{"id":19,"employee_name":"Bradley Greer","employee_salary":132000,"employee_age":41,"profile_image":""},{"id":20,"employee_name":"Dai Rios","employee_salary":217500,"employee_age":35,"profile_image":""},{"id":21,"employee_name":"Jenette Caldwell","employee_salary":345000,"employee_age":30,"profile_image":""},{"id":22,"employee_name":"Yuri Berry","employee_salary":675000,"employee_age":40,"profile_image":""},{"id":23,"employee_name":"Caesar Vance","employee_salary":106450,"employee_age":21,"profile_image":""},{"id":24,"employee_name":"Doris Wilder","employee_salary":85600,"employee_age":23,"profile_image":""}],"message":"Successfully! All records has been fetched."}
+            ```
+
+
+        - V ( View / ViewController )
+
+            ![스크린샷 2022-08-19 오전 12 24 17](https://user-images.githubusercontent.com/53691249/185435491-04a9a052-490e-4856-b2f4-363adcd5796c.png)
+
+            - button 클릭시 employee의 정보를 화면에 보여주기 위한 tableView 및 button
+
+        - VM ( ViewModel )
+            - Input & Output 방식을 사용하기 위한 프로토콜
+
+                ```swift
+                protocol ViewModelType {
+                    associatedtype Input
+                    associatedtype Output
+
+                    var input: Input { get }
+                    var output: Output { get }
+                }
+                ```
+
+            - ViewModel
+
+                ```swift
+                final class EmployeesViewModel: ViewModelType {
+
+                    struct Input {
+                        let loadTrigger = PublishSubject<Void>()
+                    }
+
+                    struct Output {
+                        let employeesList = BehaviorSubject<[Datum]>(value: [])
+                    }
+
+                    var input: Input
+                    var output: Output
+
+                    private let apiService: APIService
+                    private let disposeBag = DisposeBag()
+
+                    init(input: Input = Input(), output: Output = Output(), apiService: APIService = APIService()) {
+                        self.input = input
+                        self.output = output
+                        self.apiService = apiService
+
+                        self.input.loadTrigger
+                            .bind { [weak self] _ in
+                                self?.apiService.requestEmployees { [weak self] source in
+                                    self?.output.employeesList.onNext(source.data)
+                                }
+                            }
+                            .disposed(by: disposeBag)
+                    }
+                }
+                ```
+
+                - 설명
+                    - APIService로부터 받아온 데이터를 통해 loadTrigger(button-Click)에 bind 하기
+            - 영상
+
+                ![ezgif com-gif-maker](https://user-images.githubusercontent.com/53691249/185436782-14fc7953-1a8f-4930-b463-d186a189024b.gif)
+</div>
+</details>
+
