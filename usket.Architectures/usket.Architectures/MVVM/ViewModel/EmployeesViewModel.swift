@@ -37,6 +37,7 @@ final class EmployeesViewModel: ViewModelType {
         self.input = input
         self.output = output
         self.apiService = apiService
+        loadEmployees()
     }
     
     func fetchEmployees() {
@@ -45,7 +46,11 @@ final class EmployeesViewModel: ViewModelType {
         }
     }
     
-    func setLoadTrigger() {
-
+    func loadEmployees() {
+        input.loadTrigger
+            .bind { [weak self] _ in
+                self?.fetchEmployees()
+            }
+            .disposed(by: disposeBag)
     }
 }

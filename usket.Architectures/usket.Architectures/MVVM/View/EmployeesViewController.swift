@@ -11,9 +11,10 @@ import RxCocoa
 
 final class EmployeesViewController: BaseViewController, BaseInitializing {
     
-    private let employeesTableView = UITableView()
+    private let employeesTableView: UITableView = UITableView()
     private let employeesFetchButton = EmployeesButton()
     private let viewModel = EmployeesViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,13 @@ final class EmployeesViewController: BaseViewController, BaseInitializing {
         setUI()
         setConstraints()
         bind()
-        viewModel.fetchEmployees()
     }
     
     func setConfig() {
         employeesTableView.backgroundColor = .white
+        employeesTableView.separatorStyle = .none
+        employeesTableView.rowHeight = 100
+        employeesTableView.register(EmployeesTableViewCell.self, forCellReuseIdentifier: EmployeesTableViewCell.identifier)
     }
     
     func setUI() {
@@ -51,6 +54,14 @@ final class EmployeesViewController: BaseViewController, BaseInitializing {
     }
     
     func bind() {
-       
+        employeesFetchButton.rx.tap
+            .bind(to: viewModel.input.loadTrigger)
+            .disposed(by: disposeBag)
+        
+        viewModel.output.employeesList
+            .bind(to: employeesTableView.rx.items(cellIdentifier: EmployeesTableViewCell.identifier, cellType: EmployeesTableViewCell.self)) { row, element, cell in
+                cell.employeeInfoView.setEmployeeInfo(name: element.employeeName, age: element.employeeAge, salary: element.employeeSalary)
+            }
+            .disposed(by: disposeBag)
     }
 }
