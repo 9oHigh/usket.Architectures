@@ -24,7 +24,7 @@ final class EmployeesViewModel: ViewModelType {
     }
     
     struct Output {
-        let employeesList = BehaviorRelay<[Datum]>(value: [])
+        let employeesList = BehaviorSubject<[Datum]>(value: [])
     }
     
     var input: Input
@@ -37,19 +37,15 @@ final class EmployeesViewModel: ViewModelType {
         self.input = input
         self.output = output
         self.apiService = apiService
-        loadEmployees()
+        self.fetchEmployees()
     }
     
     func fetchEmployees() {
-        apiService.requestEmployees { [weak self] source in
-            self?.output.employeesList.accept(source.data)
-        }
-    }
-    
-    func loadEmployees() {
         input.loadTrigger
             .bind { [weak self] _ in
-                self?.fetchEmployees()
+                self?.apiService.requestEmployees { [weak self] source in
+                    self?.output.employeesList.onNext(source.data)
+                }
             }
             .disposed(by: disposeBag)
     }
