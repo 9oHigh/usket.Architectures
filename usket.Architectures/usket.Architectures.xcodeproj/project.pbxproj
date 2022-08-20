@@ -22,6 +22,7 @@
 		4C73EF0628AD29F500C96D3D /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */; };
 		4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0828AE786500C96D3D /* EmployInfoView.swift */; };
 		4C73EF0B28AE81E800C96D3D /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */; };
+		4C73EF0D28B1278C00C96D3D /* TrafficButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0C28B1278C00C96D3D /* TrafficButtonViewController.swift */; };
 		4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986D289AA78A00B7B23F /* RxCocoa */; };
 		4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986F289AA78A00B7B23F /* RxRelay */; };
 		4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9871289AA78A00B7B23F /* RxSwift */; };
@@ -78,6 +79,7 @@
 		4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
 		4C73EF0828AE786500C96D3D /* EmployInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployInfoView.swift; sourceTree = "<group>"; };
 		4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		4C73EF0C28B1278C00C96D3D /* TrafficButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficButtonViewController.swift; sourceTree = "<group>"; };
 		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		4CFC987C289AB4E200B7B23F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,9 @@
 		4C463B6D289AA13700E44172 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				4C73EF0E28B127B300C96D3D /* Model */,
+				4C73EF0F28B127B900C96D3D /* View */,
+				4C73EF1028B127CA00C96D3D /* Presenter */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -295,6 +300,28 @@
 				4C73EF0828AE786500C96D3D /* EmployInfoView.swift */,
 			);
 			path = EmployeeInfoView;
+			sourceTree = "<group>";
+		};
+		4C73EF0E28B127B300C96D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C73EF0F28B127B900C96D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF0C28B1278C00C96D3D /* TrafficButtonViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C73EF1028B127CA00C96D3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4CFC9884289D59C900B7B23F /* Utils */ = {
@@ -507,6 +534,7 @@
 				4C73EEFD28A7BF8900C96D3D /* Employees.swift in Sources */,
 				4CFC988D28A1375900B7B23F /* UITextField + Extension.swift in Sources */,
 				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
+				4C73EF0D28B1278C00C96D3D /* TrafficButtonViewController.swift in Sources */,
 				4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */,
 				4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
