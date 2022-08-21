@@ -22,6 +22,10 @@
 		4C73EF0628AD29F500C96D3D /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */; };
 		4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0828AE786500C96D3D /* EmployInfoView.swift */; };
 		4C73EF0B28AE81E800C96D3D /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */; };
+		4C73EF0D28B1278C00C96D3D /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF0C28B1278C00C96D3D /* EmojiViewController.swift */; };
+		4C73EF1228B1F4C900C96D3D /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1128B1F4C900C96D3D /* Emoji.swift */; };
+		4C73EF1428B1F5DB00C96D3D /* EmojiPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1328B1F5DB00C96D3D /* EmojiPresenter.swift */; };
+		4C73EF1728B1F7A400C96D3D /* EmojiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */; };
 		4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986D289AA78A00B7B23F /* RxCocoa */; };
 		4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986F289AA78A00B7B23F /* RxRelay */; };
 		4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9871289AA78A00B7B23F /* RxSwift */; };
@@ -78,6 +82,10 @@
 		4C73EF0528AD29F400C96D3D /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
 		4C73EF0828AE786500C96D3D /* EmployInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployInfoView.swift; sourceTree = "<group>"; };
 		4C73EF0A28AE81E800C96D3D /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		4C73EF0C28B1278C00C96D3D /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		4C73EF1128B1F4C900C96D3D /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		4C73EF1328B1F5DB00C96D3D /* EmojiPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPresenter.swift; sourceTree = "<group>"; };
+		4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiInfoView.swift; sourceTree = "<group>"; };
 		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		4CFC987C289AB4E200B7B23F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +205,9 @@
 		4C463B6D289AA13700E44172 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				4C73EF0E28B127B300C96D3D /* Model */,
+				4C73EF0F28B127B900C96D3D /* View */,
+				4C73EF1028B127CA00C96D3D /* Presenter */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -297,6 +308,38 @@
 			path = EmployeeInfoView;
 			sourceTree = "<group>";
 		};
+		4C73EF0E28B127B300C96D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF1128B1F4C900C96D3D /* Emoji.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C73EF0F28B127B900C96D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF0C28B1278C00C96D3D /* EmojiViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C73EF1028B127CA00C96D3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF1328B1F5DB00C96D3D /* EmojiPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4C73EF1528B1F78A00C96D3D /* EmojiInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */,
+			);
+			path = EmojiInfoView;
+			sourceTree = "<group>";
+		};
 		4CFC9884289D59C900B7B23F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +357,7 @@
 				4CFC988B28A1363D00B7B23F /* Button */,
 				4CFC989028A13D3600B7B23F /* UserInfoInputView */,
 				4C73EF0728AE784400C96D3D /* EmployeeInfoView */,
+				4C73EF1528B1F78A00C96D3D /* EmojiInfoView */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -492,9 +536,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CFC989428A1478900B7B23F /* ToastLabel.swift in Sources */,
+				4C73EF1728B1F7A400C96D3D /* EmojiInfoView.swift in Sources */,
 				4CFC988A289DFDFD00B7B23F /* NextPage.swift in Sources */,
 				4CFC9887289DFC8500B7B23F /* ArchitectureButton.swift in Sources */,
 				4C73EF0428ABB38400C96D3D /* EmployeesButton.swift in Sources */,
+				4C73EF1428B1F5DB00C96D3D /* EmojiPresenter.swift in Sources */,
 				4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */,
 				4C73EEFF28A7C00B00C96D3D /* EmployeesViewModel.swift in Sources */,
 				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
@@ -507,6 +553,7 @@
 				4C73EEFD28A7BF8900C96D3D /* Employees.swift in Sources */,
 				4CFC988D28A1375900B7B23F /* UITextField + Extension.swift in Sources */,
 				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
+				4C73EF0D28B1278C00C96D3D /* EmojiViewController.swift in Sources */,
 				4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */,
 				4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
@@ -514,6 +561,7 @@
 				4C73EEF628A54ACF00C96D3D /* EmployeesViewController.swift in Sources */,
 				4CFC989228A13EAF00B7B23F /* UserInfoInputView.swift in Sources */,
 				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,
+				4C73EF1228B1F4C900C96D3D /* Emoji.swift in Sources */,
 				4C463B3B289947DA00E44172 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

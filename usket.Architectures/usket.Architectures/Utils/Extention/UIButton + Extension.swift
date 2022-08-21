@@ -8,7 +8,15 @@
 import UIKit
 
 extension UIButton {
+   
+    // MARK: - EmojiViewController
     
+    func setEmojiButton(name: String) {
+        
+        setTitle(name, for: .normal)
+        setTitleColor(.white, for: .normal)
+        
+        backgroundColor = .black
+        layer.cornerRadius = 5
+    }
 }
-
-

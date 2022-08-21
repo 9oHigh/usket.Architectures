@@ -37,4 +37,17 @@ extension UILabel {
         textAlignment = .left
         font = .boldSystemFont(ofSize: 18)
     }
+    
+    // MARK: - EmojiInfoView
+    
+    func setEmojiInfoFaceLabel() {
+        textAlignment = .center
+        font = .boldSystemFont(ofSize: 80)
+    }
+    
+    func setEmojiInfoNameLabel() {
+        textColor = .black
+        textAlignment = .center
+        font = .boldSystemFont(ofSize: 24)
+    }
 }
