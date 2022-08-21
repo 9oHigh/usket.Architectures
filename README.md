@@ -257,3 +257,122 @@
 </div>
 </details>
 
+### 3. MVP
+<details>
+<summary>정리</summary>
+<div markdown="1">
+
+![image](https://user-images.githubusercontent.com/53691249/185790769-ee7e2eec-7a8f-4621-a847-006ac501d196.png)
+
+- M  ( Model )
+    - MVC와 MVVM에서의 Model의 역할과 같음
+    
+- V ( VIew )
+    - MVC와 MVVM에서의 VIew의 역할과 같음
+    
+- P ( Presenter )
+    - MVC 아키텍처에서 Controller가 하는 역할을 Presenter가 한다고 생각하면 된다. 다만, MVC와 다르게 View와 Model의 비지니스 로직이 분리되어 있다.
+    - View와 Model이 분리되어있기 때문에 테스트에 용이하다.
+    - 이벤트,  UI 업데이트에 관한 책임을 갖는다.
+    
+- MVP Architecture의  장단점
+    - 장점
+        - View와 Model을 분리함으로써 테스트에 용이하다.
+    - 단점
+        - View와 Model을 분리되었으나 View와 Presenter의 의존관계가 강해지고 Controller 대신 Presenter가 복잡해지는 문제가 여전히 존재한다.
+
+- 간단한 구현
+    - 이모티콘과 이모티콘의 이름을 함께 보여주는 뷰를 NextButton과 PrevButton 클릭 시 Presenter를 통해 업데이트 해보는 예시
+    - Model
+        - Emoji
+            
+            ```swift
+            struct Emoji {
+                let emoji: String
+                let name: String
+                
+                init(emoji: String, name: String) {
+                    self.emoji = emoji
+                    self.name = name
+                }
+            }
+            // EmojiPresenter에서 사용할 emojiList
+            let emojiList: [Emoji] = [
+                Emoji(emoji: "😊", name: "Happy"),
+                Emoji(emoji: "😡", name: "Angry"),
+                Emoji(emoji: "😞", name: "Sad"),
+                Emoji(emoji: "😲", name: "Surprised"),
+                Emoji(emoji: "🥳", name: "Celebrate")
+                
+            ]
+            ```
+            
+    
+    - View
+        - 다음, 이전 버튼
+        - Emoji Information View
+        
+        ```swift
+        private let emojiView = emojiInfoView() // 이모티콘, 설명
+        private let nextButton = UIButton()
+        private let prevButton = UIButton()
+        private let presenter = EmojiPresenter()
+        ```
+        
+    
+    - Presenter
+        
+        ```swift
+        // MARK: - EmojiProtocol
+        protocol EmojiProtocol {
+            var emoji: Emoji? { get set }
+            func nextEmoji()
+            func prevEmoji()
+        }
+        
+        // MARK: - EmojiPresenter
+        final class EmojiPresenter: EmojiProtocol {
+            
+            var emoji: Emoji?
+            var index: Int = 0
+            
+            func nextEmoji() {
+                index = index < 4 ? index + 1: index
+                emoji = emojiList[index]
+            }
+            
+            func prevEmoji() {
+                index = index > 0 ? index - 1 : index
+                emoji = emojiList[index]
+            }
+        }
+        
+        // MARK: - EmojiViewController
+        private let presenter = EmojiPresenter()
+        
+        nextButton.rx.tap
+            .subscribe({ [weak self] _ in
+                self?.presenter.nextEmoji()
+                self?.emojiView.setEmojiView(emoji: self!.presenter.emoji!)
+            })
+            .disposed(by: disposeBag)
+        
+        prevButton.rx.tap
+            .subscribe({ [weak self] _ in
+                self?.presenter.prevEmoji()
+                self?.emojiView.setEmojiView(emoji: self!.presenter.emoji!)
+            })
+            .disposed(by: disposeBag)
+        
+        ```
+        
+        - 설명
+            - EmojiProtocol을 채택하고 다음 이모티콘과 이전 이모티콘의 인덱스를 결정하는 함수를 만들어 해당 emoji를 통해 뷰에서 업데이트
+            - 보통의 경우 Service를 가지고 있으나 간단한 예시 구현을 위해 리스트 형태의 이모티콘으로 대체
+    
+- 영상
+    
+    ![ezgif com-gif-maker](https://user-images.githubusercontent.com/53691249/185790877-73adfbd6-7ab6-4ee8-9579-b9ef619fe187.gif)
+
+</div>
+</details>
