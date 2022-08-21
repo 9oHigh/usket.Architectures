@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class EmojiViewController: UIViewController, BaseInitializing {
+final class EmojiViewController: BaseViewController, BaseInitializing {
     
     private let disposeBag = DisposeBag()
     private let emojiView = emojiInfoView()
@@ -23,12 +23,12 @@ final class EmojiViewController: UIViewController, BaseInitializing {
         setUI()
         setConstraints()
         bind()
-        presenter.emoji = Emoji(emoji: "👀", name: "Hello, word!")
+        
+        presenter.emoji = Emoji(emoji: "🧑🏻‍💻", name: "Hello, word!")
         emojiView.setEmojiView(emoji: presenter.emoji!)
     }
     
     func setConfig() {
-        view.backgroundColor = .white
         nextButton.setEmojiButton(name: "NEXT")
         prevButton.setEmojiButton(name: "PREV")
     }

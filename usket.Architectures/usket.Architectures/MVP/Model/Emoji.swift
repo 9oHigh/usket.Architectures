@@ -19,6 +19,8 @@ struct Emoji {
 
 let emojiList: [Emoji] = [
     Emoji(emoji: "😊", name: "Happy"),
-    Emoji(emoji: "😭", name: "Cry"),
-    Emoji(emoji: "😡", name: "Angry")
+    Emoji(emoji: "😡", name: "Angry"),
+    Emoji(emoji: "😞", name: "Sad"),
+    Emoji(emoji: "😲", name: "Surprised"),
+    Emoji(emoji: "🥳", name: "Celebrate")
 ]
