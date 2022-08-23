@@ -26,6 +26,11 @@
 		4C73EF1228B1F4C900C96D3D /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1128B1F4C900C96D3D /* Emoji.swift */; };
 		4C73EF1428B1F5DB00C96D3D /* EmojiPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1328B1F5DB00C96D3D /* EmojiPresenter.swift */; };
 		4C73EF1728B1F7A400C96D3D /* EmojiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */; };
+		4C73EF5528B505CB00C96D3D /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF5428B505CB00C96D3D /* KeyboardViewController.swift */; };
+		4C73EF5C28B5065100C96D3D /* KeyboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF5B28B5065100C96D3D /* KeyboardInteractor.swift */; };
+		4C73EF5E28B5065C00C96D3D /* KeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF5D28B5065C00C96D3D /* KeyboardPresenter.swift */; };
+		4C73EF6128B5066900C96D3D /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF6028B5066900C96D3D /* Keyboard.swift */; };
+		4C73EF6328B5067700C96D3D /* KeyboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73EF6228B5067700C96D3D /* KeyboardRouter.swift */; };
 		4CFC986E289AA78A00B7B23F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986D289AA78A00B7B23F /* RxCocoa */; };
 		4CFC9870289AA78A00B7B23F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC986F289AA78A00B7B23F /* RxRelay */; };
 		4CFC9872289AA78A00B7B23F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CFC9871289AA78A00B7B23F /* RxSwift */; };
@@ -86,6 +91,11 @@
 		4C73EF1128B1F4C900C96D3D /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		4C73EF1328B1F5DB00C96D3D /* EmojiPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPresenter.swift; sourceTree = "<group>"; };
 		4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiInfoView.swift; sourceTree = "<group>"; };
+		4C73EF5428B505CB00C96D3D /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4C73EF5B28B5065100C96D3D /* KeyboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInteractor.swift; sourceTree = "<group>"; };
+		4C73EF5D28B5065C00C96D3D /* KeyboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPresenter.swift; sourceTree = "<group>"; };
+		4C73EF6028B5066900C96D3D /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		4C73EF6228B5067700C96D3D /* KeyboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRouter.swift; sourceTree = "<group>"; };
 		4CFC9878289AB45600B7B23F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		4CFC987A289AB46200B7B23F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		4CFC987C289AB4E200B7B23F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +225,11 @@
 		4C463B6E289AA13F00E44172 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				4C73EF5628B5060D00C96D3D /* View */,
+				4C73EF5A28B5062C00C96D3D /* Interactor */,
+				4C73EF5928B5062500C96D3D /* Presenter */,
+				4C73EF5828B5061D00C96D3D /* Entity */,
+				4C73EF5728B5061600C96D3D /* Router */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -338,6 +353,46 @@
 				4C73EF1628B1F7A400C96D3D /* EmojiInfoView.swift */,
 			);
 			path = EmojiInfoView;
+			sourceTree = "<group>";
+		};
+		4C73EF5628B5060D00C96D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF5428B505CB00C96D3D /* KeyboardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C73EF5728B5061600C96D3D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF6228B5067700C96D3D /* KeyboardRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4C73EF5828B5061D00C96D3D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF6028B5066900C96D3D /* Keyboard.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4C73EF5928B5062500C96D3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF5D28B5065C00C96D3D /* KeyboardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4C73EF5A28B5062C00C96D3D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4C73EF5B28B5065100C96D3D /* KeyboardInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		4CFC9884289D59C900B7B23F /* Utils */ = {
@@ -541,6 +596,7 @@
 				4CFC9887289DFC8500B7B23F /* ArchitectureButton.swift in Sources */,
 				4C73EF0428ABB38400C96D3D /* EmployeesButton.swift in Sources */,
 				4C73EF1428B1F5DB00C96D3D /* EmojiPresenter.swift in Sources */,
+				4C73EF5E28B5065C00C96D3D /* KeyboardPresenter.swift in Sources */,
 				4CFC9881289BF8C300B7B23F /* UIViewController + Extension.swift in Sources */,
 				4C73EEFF28A7C00B00C96D3D /* EmployeesViewModel.swift in Sources */,
 				4CFC9879289AB45600B7B23F /* UserInfoViewController.swift in Sources */,
@@ -555,9 +611,13 @@
 				4CFC987D289AB4E200B7B23F /* StartViewController.swift in Sources */,
 				4C73EF0D28B1278C00C96D3D /* EmojiViewController.swift in Sources */,
 				4C73EF0928AE786500C96D3D /* EmployInfoView.swift in Sources */,
+				4C73EF5528B505CB00C96D3D /* KeyboardViewController.swift in Sources */,
 				4CFC988F28A137F400B7B23F /* UILabel + Extension.swift in Sources */,
 				4CFC987F289AB5BA00B7B23F /* UIStackView + Extension.swift in Sources */,
+				4C73EF5C28B5065100C96D3D /* KeyboardInteractor.swift in Sources */,
 				4C73EF0B28AE81E800C96D3D /* Int + Extension.swift in Sources */,
+				4C73EF6328B5067700C96D3D /* KeyboardRouter.swift in Sources */,
+				4C73EF6128B5066900C96D3D /* Keyboard.swift in Sources */,
 				4C73EEF628A54ACF00C96D3D /* EmployeesViewController.swift in Sources */,
 				4CFC989228A13EAF00B7B23F /* UserInfoInputView.swift in Sources */,
 				4CFC987B289AB46200B7B23F /* UserInfo.swift in Sources */,

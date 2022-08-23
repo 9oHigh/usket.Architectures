@@ -61,7 +61,7 @@ final class StartViewController: BaseViewController, BaseInitializing {
                 let title = nextPage?.rawValue.uppercased()
                 self.pushToNextViewController(title: title,viewController)
             case .viper:
-                let viewController = UserInfoViewController()
+                let viewController = KeyboardViewController()
                 let title = nextPage?.rawValue.uppercased()
                 self.pushToNextViewController(title: title,viewController)
             case .ribs:
