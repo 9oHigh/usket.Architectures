@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+final class KeyboardInteractor: KeyboardListInputInteractorProtocol, KeyboardListoutputInteractorProtocol {
+    
+    var presenter: KeyboardListoutputInteractorProtocol?
+    
+    func getKeyboardList() {
+        
+    }
+    
+    func keyboardListDidFetch(keyboardList: [Keyboard]) {
+        
+    }
+}

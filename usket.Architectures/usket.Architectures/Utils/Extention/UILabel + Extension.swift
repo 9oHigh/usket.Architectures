@@ -50,4 +50,18 @@ extension UILabel {
         textAlignment = .center
         font = .boldSystemFont(ofSize: 24)
     }
+    
+    // MARK: - KeyboardTableViewCell
+    
+    func setKeyboardBrandLabel() {
+        textColor = .black
+        textAlignment = .center
+        font = .boldSystemFont(ofSize: 24)
+    }
+    
+    func setKeyboardTypeLabel() {
+        textColor = .black
+        textAlignment = .left
+        font = .systemFont(ofSize: 24)
+    }
 }

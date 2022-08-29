@@ -19,4 +19,15 @@ extension UIButton {
         backgroundColor = .black
         layer.cornerRadius = 5
     }
+    
+    //MARK: - KeyboadViewController
+    
+    func setKeyboadButton(name: String) {
+        
+        setTitle(name, for: .normal)
+        setTitleColor(.white, for: .normal)
+        
+        backgroundColor = .black
+        layer.cornerRadius = 5
+    }
 }
