@@ -33,5 +33,5 @@ protocol KeyboardListoutputInteractorProtocol {
 // Presenter -> Router
 protocol KeyboardListRouterProtocol {
     func pushToKeyboardDetail(with keyboard: Keyboard, from view: UIViewController)
-    static func createKeyboardListModule(view: UIViewController) -> UIViewController
+    static func createKeyboardListModule(viewController: UIViewController)
 }

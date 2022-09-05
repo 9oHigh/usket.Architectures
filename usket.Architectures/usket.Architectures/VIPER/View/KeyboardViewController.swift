@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-final class KeyboardViewController: BaseViewController, BaseInitializing {
+final class KeyboardViewController: BaseViewController, BaseInitializing, KeyboardListViewProtocol {
     
     private let keyboardTableView: UITableView = UITableView()
     private let keyboardFetchButton: UIButton = UIButton()
@@ -19,6 +19,7 @@ final class KeyboardViewController: BaseViewController, BaseInitializing {
         setConfig()
         setUI()
         setConstraints()
+        KeyboardRouter.createKeyboardListModule(viewController: self)
         presenter.viewDidLoad()
     }
     
@@ -53,5 +54,9 @@ final class KeyboardViewController: BaseViewController, BaseInitializing {
             make.trailing.equalTo(-16)
             make.bottom.equalToSuperview()
         }
+    }
+    
+    func showKeyboards(with keyboards: [Keyboard]) {
+        
     }
 }

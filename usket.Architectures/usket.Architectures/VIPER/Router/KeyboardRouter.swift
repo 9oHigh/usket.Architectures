@@ -13,8 +13,10 @@ final class KeyboardRouter: KeyboardListRouterProtocol {
     
     }
     
-    static func createKeyboardListModule(view: UIViewController) -> UIViewController {
+    static func createKeyboardListModule(viewController: UIViewController) {
+        let keyboardViewController = KeyboardViewController()
+        let keyboardView = keyboardViewController.view
         
-        return KeyboardViewController()
+        viewController.view = keyboardView
     }
 }

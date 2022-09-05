@@ -18,7 +18,7 @@ struct Keyboard {
     }
 }
 
-let keyboardList: [Keyboard] = [
+let fetchedKeyboardList: [Keyboard] = [
     Keyboard(brand: "KeyChron", type: "Red"),
     Keyboard(brand: "Hansung", type: "Capacitive"),
     Keyboard(brand: "KeyChron", type: "Brown"),

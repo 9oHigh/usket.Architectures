@@ -14,7 +14,8 @@ final class KeyboardPresenter: KeyboardListPresenterProtocol, KeyboardListViewPr
     var router: KeyboardListRouterProtocol?
     
     func viewDidLoad() {
-        
+        interactor?.getKeyboardList()
+        view?.showKeyboards(with: <#T##[Keyboard]#>)
     }
     
     func showKeyboardInformation(with keyboard: Keyboard, from view: UIViewController) {
